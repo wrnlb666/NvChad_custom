@@ -6,12 +6,20 @@ autocmd("VimResized", {
 })
 
 
+-- insert behavior
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.clipboard = "unnamedplus"
+
+-- default shell
 vim.opt.shell = 'zsh'
 
+-- git branches
+vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
+
+
+-- nvim tree automatic behavior
 vim.api.nvim_exec([[
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'cd '.argv()[0] | execute 'NvimTreeToggle' argv()[0] | endif
@@ -25,4 +33,5 @@ vim.api.nvim_exec([[
 vim.api.nvim_exec([[
   autocmd BufEnter * if (winnr('$') == 1 && &filetype == 'NvimTree') | q | endif
 ]], false)
+
 
