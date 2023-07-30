@@ -17,6 +17,7 @@ vim.opt.shell = 'zsh'
 
 -- git branches
 vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', 'D', '"_d', {noremap = true})
 
 
 -- nvim tree automatic behavior
