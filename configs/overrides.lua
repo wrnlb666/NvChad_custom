@@ -10,10 +10,13 @@ M.treesitter = {
     "typescript",
     "tsx",
     "c",
+    "make",
     "go",
     "cpp",
     "python",
     "java",
+    "c_sharp",
+    "rust",
     "markdown",
     "markdown_inline",
   },
@@ -41,6 +44,10 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- golang
+    "gopls",
+    "templ",
   },
 }
 

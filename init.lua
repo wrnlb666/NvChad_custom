@@ -36,3 +36,17 @@ vim.api.nvim_exec([[
 ]], false)
 
 
+
+-- add `.templ` file extension
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})
+
+
+
+
+local treesitter = require("lazy").load { plugins = {"nvim-treesitter"} }
+parser_config = treesitter.parsers.get_parser_configs()
+vim.treesitter.language.register('templ', 'templ')

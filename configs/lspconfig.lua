@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "gopls", "templ", "pyright", "rust_analyzer", "jdtls" }
+local servers = { "html", "cssls", "tsserver", "gopls", "pyright", "rust_analyzer", "jdtls" }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -23,6 +23,16 @@ lspconfig.clangd.setup {
     cmd = {
         "/usr/bin/clangd",
         "--offset-encoding=utf-16",
+    },
+}
+
+-- go/templ
+lspconfig.templ.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = {
+        "/home/wrnlb/go/bin/templ",
+        "lsp",
     },
 }
 
