@@ -45,8 +45,3 @@ vim.filetype.add({
 })
 
 
-
-
-local treesitter = require("lazy").load { plugins = {"nvim-treesitter"} }
-parser_config = treesitter.parsers.get_parser_configs()
-vim.treesitter.language.register('templ', 'templ')
