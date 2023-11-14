@@ -41,6 +41,7 @@ vim.api.nvim_exec([[
 vim.filetype.add({
     extension = {
         templ = "templ",
+        proto = "proto",
     },
 })
 
