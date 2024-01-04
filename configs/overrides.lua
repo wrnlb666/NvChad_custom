@@ -12,6 +12,7 @@ M.treesitter = {
     "c",
     "make",
     "go",
+    "templ",
     "cpp",
     "python",
     "java",
