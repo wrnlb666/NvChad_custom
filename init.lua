@@ -16,7 +16,10 @@ vim.opt.clipboard = "unnamedplus"
 if vim.loop.os_uname().sysname == "Linux" then
     vim.opt.shell = 'zsh'
 else 
-    vim.opt.shell = "powershell"
+    vim.o.shell = "powershell"
+    vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+    vim.o.shellquote = ""
+    vim.o.shellxquote = ""
 end
 
 -- git branches
