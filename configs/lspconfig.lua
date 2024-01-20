@@ -21,7 +21,7 @@ lspconfig.clangd.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = {
-        "/usr/bin/clangd",
+        "clangd",
         "--offset-encoding=utf-16",
     },
 }
@@ -31,7 +31,7 @@ lspconfig.templ.setup{
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = {
-        "/home/wrnlb/go/bin/templ",
+        "templ",
         "lsp",
     },
 }
@@ -41,7 +41,7 @@ lspconfig.omnisharp.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = {
-        "/usr/bin/omnisharp",
+        "omnisharp",
     },
     enable_roslyn_analyzers = true,
     organize_imports_on_format = true,

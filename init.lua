@@ -13,7 +13,11 @@ vim.opt.softtabstop = 4
 vim.opt.clipboard = "unnamedplus"
 
 -- default shell
-vim.opt.shell = 'zsh'
+if vim.loop.os_uname().sysname == "Linux" then
+    vim.opt.shell = 'zsh'
+else 
+    vim.opt.shell = "powershell"
+end
 
 -- git branches
 vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
