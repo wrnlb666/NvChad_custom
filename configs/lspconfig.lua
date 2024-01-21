@@ -36,6 +36,14 @@ lspconfig.templ.setup{
     },
 }
 
+lspconfig.htmx.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {
+        "html", "templ"
+    },
+}
+
 -- omnisharp
 lspconfig.omnisharp.setup {
     on_attach = on_attach,
