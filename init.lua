@@ -17,18 +17,10 @@ else
     vim.opt.clipboard = "unnamed"
 end
 
-
 -- default shell
-local shell = os.getenv("SHELL")
 if vim.loop.os_uname().sysname == "Linux" then
-    if shell and shell:find("zsh") then
-        vim.opt.shell = "zsh"
-    end
-    vim.opt.shell = "bash"
+    vim.opt.shell = 'zsh'
 else 
-    if shell and shell:find("zsh") then
-        vim.opt.shell = zsh
-    end
     vim.o.shell = "powershell"
     vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
     vim.o.shellquote = ""
