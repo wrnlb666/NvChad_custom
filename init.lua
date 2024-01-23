@@ -18,9 +18,10 @@ else
 end
 
 -- default shell
-if vim.loop.os_uname().sysname == "Linux" then
+sysname = vim.loop.os_uname().sysname
+if sysname == "Linux" then
     vim.opt.shell = 'zsh'
-else 
+else
     vim.o.shell = "powershell"
     vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
     vim.o.shellquote = ""
