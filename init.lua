@@ -10,7 +10,12 @@ autocmd("VimResized", {
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.clipboard = "unnamedplus"
+
+if vim.loop.os_uname().sysname == "Linux" then
+    vim.opt.clipboard = "unnamedplus"
+else 
+    vim.opt.clipboard = "unnamed"
+end
 
 -- default shell
 if vim.loop.os_uname().sysname == "Linux" then
@@ -42,6 +47,9 @@ vim.api.nvim_exec([[
   autocmd BufEnter * if (winnr('$') == 1 && &filetype == 'NvimTree') | q | endif
 ]], false)
 
+
+-- line break
+vim.wo.linebreak = true
 
 
 -- add `.templ` file extension
