@@ -13,12 +13,12 @@ vim.opt.softtabstop = 4
 
 if vim.loop.os_uname().sysname == "Linux" then
     vim.opt.clipboard = "unnamedplus"
-else 
+else
     vim.opt.clipboard = "unnamed"
 end
 
 -- default shell
-sysname = vim.loop.os_uname().sysname
+local sysname = vim.loop.os_uname().sysname
 if sysname == "Linux" then
     vim.opt.shell = 'zsh'
 else
