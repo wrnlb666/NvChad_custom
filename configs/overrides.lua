@@ -17,6 +17,7 @@ M.treesitter = {
     "python",
     "java",
     "c_sharp",
+    "zig",
     "rust",
     "markdown",
     "markdown_inline",
