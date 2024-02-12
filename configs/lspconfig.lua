@@ -36,6 +36,7 @@ lspconfig.templ.setup{
     },
 }
 
+-- htmx
 lspconfig.htmx.setup{
     on_attach = on_attach,
     capabilities = capabilities,
@@ -51,6 +52,4 @@ lspconfig.omnisharp.setup {
     cmd = {
         "omnisharp",
     },
-    enable_roslyn_analyzers = true,
-    organize_imports_on_format = true,
 }
