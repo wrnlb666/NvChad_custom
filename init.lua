@@ -18,15 +18,16 @@ else
 end
 
 -- default shell
-local sysname = vim.loop.os_uname().sysname
-if sysname == "Linux" then
-    vim.opt.shell = 'zsh'
-else
-    vim.o.shell = "powershell"
-    vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
-    vim.o.shellquote = ""
-    vim.o.shellxquote = ""
-end
+vim.opt.shell = 'zsh'
+-- local sysname = vim.loop.os_uname().sysname
+-- if sysname == "Linux" then
+--     vim.opt.shell = 'zsh'
+-- else
+--     vim.o.shell = "powershell"
+--     vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+--     vim.o.shellquote = ""
+--     vim.o.shellxquote = ""
+-- end
 
 -- git branches
 vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
