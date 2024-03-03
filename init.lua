@@ -29,6 +29,10 @@ else
     vim.o.shellxquote = ""
 end
 
+-- treesitter fold
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- git branches
 vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>Telescope git_branches<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', 'D', '"_d', {noremap = true})
