@@ -36,15 +36,15 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Swapping 'za' with 'zA'
 vim.api.nvim_set_keymap('n', 'za', 'zA', {noremap = true})
-vim.api.nvim_set_keymap('n', 'zA', 'za', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'zA', 'za', {noremap = true})
 
--- Swapping 'zr' with 'zR'
-vim.api.nvim_set_keymap('n', 'zr', 'zR', {noremap = true})
-vim.api.nvim_set_keymap('n', 'zR', 'zr', {noremap = true})
-
--- Swapping 'zm' with 'zM'
-vim.api.nvim_set_keymap('n', 'zm', 'zM', {noremap = true})
-vim.api.nvim_set_keymap('n', 'zM', 'zm', {noremap = true})
+-- -- Swapping 'zr' with 'zR'
+-- vim.api.nvim_set_keymap('n', 'zr', 'zR', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'zR', 'zr', {noremap = true})
+--
+-- -- Swapping 'zm' with 'zM'
+-- vim.api.nvim_set_keymap('n', 'zm', 'zM', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'zM', 'zm', {noremap = true})
 
 
 -- git branches
