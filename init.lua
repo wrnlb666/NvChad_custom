@@ -33,6 +33,11 @@ end
 -- treesitter fold
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  command = "normal! zR"
+})
+
 
 -- Swapping 'za' with 'zA'
 vim.api.nvim_set_keymap('n', 'za', 'zA', {noremap = true})
