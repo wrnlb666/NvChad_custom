@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "gopls", "bufls", "pyright", "zls", "rust_analyzer", "jdtls", "kotlin_language_server" }
+local servers = { "html", "cssls", "tsserver", "bufls", "pyright", "zls", "rust_analyzer", "jdtls", "kotlin_language_server" }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -24,6 +24,15 @@ lspconfig.clangd.setup {
         "clangd",
         "--offset-encoding=utf-16",
     },
+}
+
+-- gopls
+lspconfig.gopls.setup {
+    on_attach = function(_, bufnr)
+        _ = bufnr
+        vim.api.nvim_command("au BufWritePost <buffer> lua vim.lsp.buf.format({async=true})")
+    end,
+    capabilities = capabilities,
 }
 
 -- go/templ
