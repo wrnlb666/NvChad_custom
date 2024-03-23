@@ -19,6 +19,7 @@ M.treesitter = {
     "c_sharp",
     "zig",
     "rust",
+    "dart",
     "kotlin",
     "markdown",
     "markdown_inline",
