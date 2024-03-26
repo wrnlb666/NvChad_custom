@@ -28,10 +28,7 @@ lspconfig.clangd.setup {
 
 -- gopls
 lspconfig.gopls.setup {
-    on_attach = function(_, bufnr)
-        _ = bufnr
-        vim.api.nvim_command("au BufWritePost <buffer> lua vim.lsp.buf.format({async=true})")
-    end,
+    on_attach = on_attach,
     capabilities = capabilities,
 }
 
