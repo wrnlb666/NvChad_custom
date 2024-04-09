@@ -28,6 +28,13 @@ lspconfig.clangd.setup {
         "--clang-tidy",
         -- "--pretty",
     },
+    filetypes = {
+        "c",
+        "cpp",
+        "objc",
+        "objcpp",
+        "cuda",
+    },
 }
 
 -- gopls
